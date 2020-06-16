@@ -46,7 +46,7 @@ Running hunt
 For this example hunt is called with the following command:
 
 ```
-hunt example.001 password –chain=256
+hunt example.001 password --chain=256
 ```
 
 The options are as follows:
@@ -220,7 +220,7 @@ Looking at the FAT volume we can map out the layout of the files. The layout of 
 
 We can now use hunt to try and locate some headers. hunt is called in exactly the same way as before:
 ```
-hunt example2.001 password –chain=256
+hunt example2.001 password --chain=256
 ```
 
 In this instance, only one header was located at sector 20496.

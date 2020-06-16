@@ -103,9 +103,9 @@ def chain_search(source_entropy,target):
             percentage = (float(100) / len(source_entropy)) * x
             print "\rFinding chains... {}%".format(percentage),
         if source_entropy[x]:
-            #contiune chain or start new chain
+            #continue chain or start new chain
             if cur_len > -1:
-                #contiune chain
+                #continue chain
                 cur_len += 1
             else:
                 #start new chain
@@ -119,7 +119,7 @@ def chain_search(source_entropy,target):
                 if cur_len >= target:
                     #append current chain to list
                     chains.append([cur_start,cur_len])
-                #reset chaiin stats
+                #reset chain stats
                 cur_start = -1
                 cur_len = -1
             else:
@@ -150,7 +150,7 @@ def test_chains(chains,f,hash_options,crypto_options,passwords):
 
         #calc start location, searching for the typical location of a normal
         #backup header and not a hidden header. Changing the -256 will change
-        #this or increasing the search size will aloow it to be found however
+        #this or increasing the search size will allow it to be found however
         #this will be slow
         search_start = (chain_sector + chain_len - 256 - search_size) * 512
         search_end = (chain_sector + chain_len - 256 + search_size) * 512
