@@ -51,9 +51,9 @@ def chain_search(source_entropy,target):
             percentage = (float(100) / len(source_entropy)) * x
             print "\rFinding chains... {}%".format(percentage),
         if source_entropy[x]:
-            #contiune chain or start new chain
+            #continue chain or start new chain
             if cur_len > -1:
-                #contiune chain
+                #continue chain
                 cur_len += 1
             else:
                 #start new chain
@@ -67,7 +67,7 @@ def chain_search(source_entropy,target):
                 if cur_len >= target:
                     #append current chain to list
                     chains.append([cur_start,cur_len])
-                #reset chaiin stats
+                #reset chain stats
                 cur_start = -1
                 cur_len = -1
             else:
